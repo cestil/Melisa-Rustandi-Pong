@@ -24,15 +24,20 @@ public class PaddleController : MonoBehaviour
     {
         if (Input.GetKey(upKey))
         {
-            return Vector2.up * speed;
+            if (gameObject.transform.position.y < 3.67759f)
+            {
+                return Vector2.up * speed;
+            }
         }
         else if (Input.GetKey(downKey))
         {
-            return Vector2.down * speed;
+            if (gameObject.transform.position.y > -3.67759f)
+            {
+                return Vector2.down * speed;
+            }
         }
-
-        return Vector2.zero;
-    }
+            return Vector2.zero;
+        }
 
     private void MoveObject(Vector2 movement)
     {
