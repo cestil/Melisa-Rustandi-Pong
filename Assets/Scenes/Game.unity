@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c95ce4e3ebfdf145879d32d4525e37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 4, y: 2}
+  speed: {x: 6, y: 4}
   resetPosition: {x: 0, y: 0}
 --- !u!58 &91406712
 CircleCollider2D:
@@ -449,7 +449,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 9.03, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &173982381
 MonoBehaviour:
@@ -675,7 +675,7 @@ Transform:
   - {fileID: 1590308035}
   - {fileID: 270396367}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &474213940
 MonoBehaviour:
@@ -1161,7 +1161,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 9.03, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1409664578
 MonoBehaviour:
@@ -1732,7 +1732,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2079218873
 GameObject:
