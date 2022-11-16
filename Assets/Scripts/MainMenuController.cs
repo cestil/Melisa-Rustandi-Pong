@@ -14,4 +14,14 @@ public class MainMenuController : MonoBehaviour
     {
         Debug.Log("Created By Melisa Rustandi");
     }
+
+    public void GameCredit()
+    {
+        SceneManager.LoadScene("Credit");
+    }
+
+    public void Home()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
 }
