@@ -9,6 +9,8 @@ public class BallController : MonoBehaviour
 
     private Rigidbody2D rig;
 
+    public int ballDir;
+
     private float totalMagnitude;
 
     private void Start()
@@ -40,5 +42,17 @@ public class BallController : MonoBehaviour
     {
         rig.velocity *= magnitude;
         totalMagnitude *= magnitude;
+    }
+
+    public void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.name == "Paddle Kanan")
+        {
+            ballDir = -1;
+        }
+        else if (col.gameObject.name == "Paddle Kiri")
+        {
+            ballDir = 1;
+        }
     }
 }

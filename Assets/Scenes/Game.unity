@@ -302,8 +302,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c95ce4e3ebfdf145879d32d4525e37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 4, y: 2}
+  speed: {x: 6, y: 4}
   resetPosition: {x: 0, y: 0}
+  ballDir: 0
 --- !u!58 &91406712
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -388,10 +389,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 474213940}
   ball: {fileID: 91406712}
-  rigBall: {fileID: 91406713}
   paddleKanan: {fileID: 228183377}
   paddleKiri: {fileID: 1625363917}
   extension: 2
+  duration: 5
 --- !u!61 &135122807
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -694,6 +695,11 @@ MonoBehaviour:
   speed: 7
   upKey: 112
   downKey: 106
+  extendDuration: 0
+  speedUp: 0
+  speedUpDuration: 0
+  timerSpeedUp: 0
+  totalSpeedUp: 0
 --- !u!61 &228183377
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -820,13 +826,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnArea: {fileID: 1590308035}
-  maxPowerUpAmount: 2
+  maxPowerUpAmount: 5
   spawnInterval: 5
   deadInterval: 3
   powerUpAreaMin: {x: -9, y: -3.5}
   powerUpAreaMax: {x: 9, y: 3.5}
   powerUpTemplateList:
   - {fileID: 1775584749}
+  - {fileID: 135122804}
 --- !u!1 &486901003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,6 +1438,7 @@ MonoBehaviour:
   paddleKanan: {fileID: 228183377}
   paddleKiri: {fileID: 1625363917}
   magnitude: 2
+  duration: 0
 --- !u!61 &1145976333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1969,6 +1977,11 @@ MonoBehaviour:
   speed: 7
   upKey: 114
   downKey: 97
+  extendDuration: 0
+  speedUp: 0
+  speedUpDuration: 0
+  timerSpeedUp: 0
+  totalSpeedUp: 0
 --- !u!61 &1625363917
 BoxCollider2D:
   m_ObjectHideFlags: 0
