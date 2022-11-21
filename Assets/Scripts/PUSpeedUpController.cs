@@ -12,7 +12,16 @@ public class PUSpeedUpController : MonoBehaviour
     {
         if (collision == ball)
         {
-            ball.GetComponent<BallController>().ActivePUSpeedUp(magnitude);
+            Vector2 velocityOnly = ball.GetComponent<Rigidbody2D>().velocity.normalized;
+            if ((velocityOnly.x >= 40) || (velocityOnly.y >= 40))
+            {
+                return;
+            }
+            else
+            {
+                ball.GetComponent<BallController>().ActivePUSpeedUp(magnitude);
+            }
+
             Destroy(gameObject);
             manager.RemovePowerUp(gameObject);
         }

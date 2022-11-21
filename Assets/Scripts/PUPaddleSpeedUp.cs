@@ -9,7 +9,7 @@ public class PUPaddleSpeedUp : MonoBehaviour
     public Collider2D paddleKanan;
     public Collider2D paddleKiri;
 
-    public float magnitude;
+    public int magnitude;
     public float duration;
 
     private void OnTriggerEnter2D(Collider2D collision)

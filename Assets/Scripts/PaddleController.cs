@@ -13,14 +13,14 @@ public class PaddleController : MonoBehaviour
     private Transform length;
 
     private bool extend;
-    public float extendDuration;
+    private float extendDuration;
     private float timerExtend;
     private float totalExtendPU;
 
-    public bool speedUp;
-    public float speedUpDuration;
-    public float timerSpeedUp;
-    public float totalSpeedUp;
+    private bool speedUp;
+    private float speedUpDuration;
+    private float timerSpeedUp;
+    private int totalSpeedUp;
 
     private void Start()
     {
@@ -56,7 +56,7 @@ public class PaddleController : MonoBehaviour
 
             if (timerSpeedUp >= speedUpDuration)
             {
-                DeactivePUExtendPaddle();
+                DeactivePUSpeedUpPaddle();
             }
         }
     }
@@ -95,6 +95,14 @@ public class PaddleController : MonoBehaviour
         totalExtendPU *= extension;
     }
 
+    public void ActivePUPaddleSpeedUp(int magnitude, float duration)
+    {
+        speed *= magnitude;
+        speedUpDuration = duration;
+        speedUp = true;
+        totalSpeedUp *= magnitude;
+    }
+
     public void DeactivePUExtendPaddle()
     {
         length.localScale = new Vector2(length.localScale.x, length.localScale.y / totalExtendPU);
@@ -103,17 +111,9 @@ public class PaddleController : MonoBehaviour
         totalExtendPU = 1;
     }
 
-    public void ActivePUPaddleSpeedUp(float magnitude, float duration)
-    {
-        rig.velocity *= magnitude;
-        speedUpDuration = duration;
-        speedUp = true;
-        totalSpeedUp *= magnitude;
-    }
-
     public void DeactivePUSpeedUpPaddle()
     {
-        rig.velocity /= totalSpeedUp;
+        speed /= totalSpeedUp;
         speedUp = false;
         timerSpeedUp = 0;
         totalSpeedUp = 1;

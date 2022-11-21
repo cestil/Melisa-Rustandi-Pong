@@ -19,6 +19,8 @@ public class BallController : MonoBehaviour
         rig.velocity = speed;
 
         totalMagnitude = 1;
+
+        ballDir = 0;
     }
 
     public void ResetBall()
@@ -36,6 +38,7 @@ public class BallController : MonoBehaviour
         }
 
         totalMagnitude = 1;
+        ballDir = 0;
     }
 
     public void ActivePUSpeedUp(float magnitude)

@@ -693,13 +693,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  upKey: 112
-  downKey: 106
-  extendDuration: 0
-  speedUp: 0
-  speedUpDuration: 0
-  timerSpeedUp: 0
-  totalSpeedUp: 0
+  upKey: 111
+  downKey: 107
 --- !u!61 &228183377
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -828,12 +823,13 @@ MonoBehaviour:
   spawnArea: {fileID: 1590308035}
   maxPowerUpAmount: 5
   spawnInterval: 5
-  deadInterval: 3
+  deadInterval: 4
   powerUpAreaMin: {x: -9, y: -3.5}
   powerUpAreaMax: {x: 9, y: 3.5}
   powerUpTemplateList:
   - {fileID: 1775584749}
   - {fileID: 135122804}
+  - {fileID: 1145976331}
 --- !u!1 &486901003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,7 +1434,7 @@ MonoBehaviour:
   paddleKanan: {fileID: 228183377}
   paddleKiri: {fileID: 1625363917}
   magnitude: 2
-  duration: 0
+  duration: 5
 --- !u!61 &1145976333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1975,13 +1971,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  upKey: 114
-  downKey: 97
-  extendDuration: 0
-  speedUp: 0
-  speedUpDuration: 0
-  timerSpeedUp: 0
-  totalSpeedUp: 0
+  upKey: 119
+  downKey: 115
 --- !u!61 &1625363917
 BoxCollider2D:
   m_ObjectHideFlags: 0
